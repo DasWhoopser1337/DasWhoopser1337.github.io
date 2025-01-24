@@ -1,5 +1,19 @@
-.body {
+body {
 
-    background-color: color(srgb 25 25 25);
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+
+}
+
+a {
+
+    color: rgb(225, 225, 225);
+
+}
+
+header {
+
+    position: sticky;
+    top: 0;
 
 }
