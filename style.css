@@ -51,17 +51,24 @@ body {
 
 }
 
-.window-body button {
-    background-color : #C0C0C0;
+.side-bar > .button {
+    background-color: #C0C0C0;
+    color: black;
     font-size: 20px;
     font-family: "W95font";
-    margin: 6px;
     width: 128px;
     height: 32px;
     border: 2px solid;
     border-color: white #000 #000 white;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    margin-bottom: 8px;
 }
+
 
 .top-bar {
 
