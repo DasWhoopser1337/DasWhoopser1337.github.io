@@ -1,6 +1,6 @@
 body {
 
-    background: #000;
+    background: #000000;
     color: darkgreen;
     font-family: 'Abel';font-size: 22px;
 
@@ -8,12 +8,41 @@ body {
 
 .window {
 
-    height : 90vh;
-    width : 90vw;
+    height : 22rem;
+    width : 36rem;
     background:#C0C0C0;
     border: 1px solid;
     border-color: white #000 #000 white;
     color : black;
+
+}
+
+.window p {
+
+    font-size: 28px;
+    margin: 12px;
+    text-shadow: black 2px 2px;
+    color : white;
+
+}
+
+.side-bar {
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+
+}
+
+.window-body button {
+    background-color : #C0C0C0;
+    font-size: 20px;
+    font-family: Abel;
+    margin: 6px;
+    width: 128px;
+    height: 32px;
+    border: 2px solid;
+    border-color: white #000 #000 white;
 
 }
 
@@ -22,6 +51,7 @@ body {
     background-color: #000080;
     color : white;
     padding-left: 12px;
+    padding-right: 2px;
     height: 32px;
 
 }
