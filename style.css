@@ -1,23 +1,15 @@
 @font-face {
     font-family: 'W95font';
-    src: url('fonts/w95font/w95font.woff2') format('woff2'),
-         url('fonts/w95font/w95font.woff') format('woff');
+    src: url('fonts/w95font/w-95-sans-serif.woff2') format('woff2'),
+         url('fonts/w95font/w-95-sans-serif.woff') format('woff');
     font-weight: normal;
-}
-
-@font-face {
-    font-family: 'W95font';
-    src: url('fonts/w95font/w95font-bold.woff2') format('woff2'),
-         url('fonts/w95font/w95font-bold.woff') format('woff');
-    font-weight: bold;
-
 }
 
 body {
 
     background: #000000;
     color: darkgreen;
-    font-family: 'W95font';font-size: 22px;
+    font-family: 'W95font';font-size: 16px;
     overflow: hidden;
     font-weight : normal;
 
@@ -26,6 +18,17 @@ body {
 .window {
 
     height : 22rem;
+    width : 36rem;
+    background:#C0C0C0;
+    border: 1px solid;
+    border-color: white #000 #000 white;
+    color : black;
+
+}
+
+.window-big {
+
+    height : 90vh;
     width : 36rem;
     background:#C0C0C0;
     border: 1px solid;
@@ -54,7 +57,7 @@ body {
 .side-bar > .button {
     background-color: #C0C0C0;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "W95font";
     width: 128px;
     height: 32px;
@@ -116,5 +119,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+.window-body {
+
+    padding: 10px;
+
+}
+
+.subpage {
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+    scrollbar-color: #c0c0c0;
 
 }
