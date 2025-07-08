@@ -23,6 +23,7 @@ body {
     border: 1px solid;
     border-color: white #000 #000 white;
     color : black;
+    position: absolute;
 
 }
 
@@ -85,13 +86,25 @@ body {
     display: flex;
     align-items: center;
 
+    /* cross browser feature yayy */
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
 }
 
-.top-bar button {
+.top-bar .btn {
 
     color : #C0C0C0;
     background-color : #C0C0C0;
-    margin: 2px;
+    margin: 3px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid;
+    border-color: white #000 #000 white;
+    
 
 }
 
@@ -106,7 +119,7 @@ header {
     background-color: #000080;
     width: 100vw;
     color : white;
-    position: fixed;
+    position: sticky;
     font-size: 18px;
 
 }
@@ -134,5 +147,20 @@ header {
     overflow-x: hidden;
     height: 80vh;
     scrollbar-color: #c0c0c0;
+    scrollbar-width: auto;
+
+}
+
+.centered {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.bordered {
+
+    border: 2px solid;
+    border-color: white #000 #000 white;
 
 }

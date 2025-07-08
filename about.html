@@ -4,6 +4,7 @@
 <head>
     <link href="style.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <script src = "windows.js"></script>
     <title>My epic website !</title>
 
     <style>
@@ -11,9 +12,17 @@
 
             padding: 10px;
             font-family: "Abel" ; 
-            background-color: green;
+            background-color: #F5CE8A;
             font-size: 22px;
             
+
+        }
+
+        #duck {
+
+            width: 250px;
+            height : 250px;
+            z-index: 20;
 
         }
 
@@ -24,16 +33,36 @@
 
 <body>
 
+    <div class = "window draggable" id = "duck">
+        <div class = "top-bar">
+            duck.gif
+
+                <div class = "buttons-wrapper">
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                </div>
+        </div>
+
+        <div class = "window-body">
+            <div class = "centered">
+                <img class = "bordered" src = "images/duck.gif" alt = "duck" width="200">
+            </div>
+        </div>
+    </div>
+
+
     <div class = "main-container">
+
         <div class = "window-big">
             <div class = "top-bar">
                 
                 About me
 
                 <div class = "buttons-wrapper">
-                    <button>_</button>
-                    <button>_</button>
-                    <button>_</button>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
                 </div>
 
             </div>
@@ -46,9 +75,22 @@
 
                     ---top---<br>
                     Haiii !! This is placeholder text :3<br>
-                    <br><br><br><br><br><br><br>
-                    <br><br><br><br><br><br><br><br>
-                    I like ice cream !<br>
+                    Please watch this duck for me<br>
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <br>
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <br>
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <br>
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
+                    <img src = "images/duck.gif" alt = "duck" width="120">
                     <br><br><br><br><br><br><br><br><br>
                     <br><br><br><br><br><br><br><br><br><br>
                     <br><br><br><br><br><br><br><br><br><br>
@@ -65,6 +107,7 @@
             </div>
 
         </div>
+
     </div>
 
 </body>
