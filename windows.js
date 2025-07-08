@@ -13,6 +13,7 @@ function drag(draggables) {
 
             document.onmouseup = stopDragging;
             document.onmousemove = doDragging;
+
         };
 
         function doDragging(ev) {
@@ -37,6 +38,8 @@ function drag(draggables) {
         }
     }
 }
+
+
 
 const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 
