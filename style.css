@@ -27,6 +27,12 @@ body {
 
 }
 
+.window.animated {
+
+    visibility: hidden;
+
+}
+
 .window-big {
 
     height : 90vh;

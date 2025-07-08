@@ -39,23 +39,85 @@ function drag(draggables) {
     }
 }
 
+function init_windows(windows) {
 
+    for (let i = 0; i < windows.length; i++) {
+        const me = windows[i];
+        me.dataset.state = "-1";
+        me.dataset.delay = String(Math.max(i * 30 + getRandom(- i * 30, 30), 0));
+        console.log(me.dataset.delay);
+    }
+
+}
+
+
+function animate_windows(windows) {
+
+    for (let i = 0; i < windows.length; i++) {
+        const me = windows[i];
+
+        let fdelay = parseFloat(me.dataset.delay);
+
+        if (fdelay <= 0) {
+
+            switch (me.dataset.state) {
+
+                case "-1" :
+                    randpos(me);
+                    me.dataset.state = "0"
+                    me.style.visibility = "visible";
+                    me.style.opacity = 0.5;
+                    me.style.transform = "scale(0.05)";
+                    me.style.filter = "grayscale(100%) brightness(1.2)";
+
+                    me.dataset.prog = "0";
+                break;
+
+                case "0" :
+                    let fprog = parseFloat(me.dataset.prog);
+                    fprog += 0.1;
+                    me.dataset.prog = String(fprog);
+                    me.style.transform = "scale(" + (fprog) + ")";
+                    me.style.opacity = 0.5 + fprog;
+
+                    if (fprog >= 1.0) {
+                        me.dataset.state = "1";
+                    }
+                break;
+
+                case "1" :
+                    me.style.filter = "none";
+
+            }
+        }
+        else {
+            fdelay -= 1;
+            me.dataset.delay = String(fdelay);
+        }
+    }
+
+}
+
+function window_tick() {
+    
+    animate_windows(document.getElementsByClassName("window animated"));
+    requestAnimationFrame(window_tick);
+};
 
 const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 
-const randpos = (elements) => {
+const randpos = (me) => {
 
     let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-    for (let i = 0; i < elements.length; i++) {
-        const me = elements[i]
-        me.style.left = getRandom(0, vw - me.offsetWidth) + "px";
-        me.style.top = getRandom(0, vh - me.offsetHeight) + "px";
-    }
+    me.style.left = getRandom(0, vw - me.offsetWidth) + "px";
+    me.style.top = getRandom(0, vh - me.offsetHeight) + "px";
 }
 
 window.onload = function () {
+
     drag(document.getElementsByClassName("draggable"));
-    randpos(document.getElementsByClassName("randompos"))
+    init_windows(document.getElementsByClassName("window animated"));
+    requestAnimationFrame(window_tick);
 };
